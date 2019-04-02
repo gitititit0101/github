@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>颠覆三观-搜索页面</title>
+    <!-- 基于mui插件的样式和js -->
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/mui/css/iconfont.css">
+    <!-- 引入网页的网页图标 -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <!-- 引入首页的公共样式 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入搜索页面的样式 -->
+    <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+    <!-- header导航栏部分 -->
+    <header id="header" class="mui-bar mui-bar-nav abing_header">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left header-l"></a>
+        <h1 class="mui-title">搜索中心</h1>
+        <!-- <a href="javascript:;" class="mui-icon mui-icon-search header_r"></a> -->
+    </header>
+    <!-- header导航栏部分end -->
+    <!-- 搜索部分 -->
+    <div class="mui-content">
+        <div class="search">
+            <input type="text" placeholder="请你输入你想要的" id="keyword">
+            <input type="button" value="搜索" id="searchbtn">
+        </div>
+        <!-- s搜索历史 -->
+        <div class="search_c">
+            <span class="mui-pull-left">搜索历史</span>
+            <span class="mui-pull-right" id="clearBtn"><i class="mui-icon mui-icon-trash"></i>清空历史</span>
+        </div>
+        <!-- s搜索结果记录 -->
+        <ul class="mui-table-view historyResult" id="historyList">
+            <li class="mui-table-view-cell">武汉金融港</li>
+            <li class="mui-table-view-cell">前端27期</li>
+            <li class="mui-table-view-cell">明天自习</li>
+        </ul>
+    </div>
+    <!-- 搜索部分  end-->
+
+    <!-- 底部结构部分 -->
+    <nav class="mui-bar mui-bar-tab abing_nav abing_nav">
+        <a class="mui-tab-item mui-active" href="#tabbar">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="#tabbar-with-chat">
+            <span class="mui-icon mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="#tabbar-with-contact">
+            <span class="mui-icon iconfont icon-gouwuche"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="#tabbar-with-map">
+            <span class="mui-icon mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <!-- 底部结构部分end -->
+    <!-- 引入页面的js代码文件 -->
+    <script src="./js/search.js"></script>
+</body>
+
+</html>

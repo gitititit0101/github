@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 111 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>颠覆三观-分页面</title>
+    <!-- 基于mui插件的样式和js -->
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/mui/css/iconfont.css">
+    <!-- 引入网页的网页图标 -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!--  -->
+    <script src="./assets/artTemplate/template-web.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <!-- 引入首页的公共样式 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入分页面的样式 -->
+    <link rel="stylesheet" href="css/category.css">
+    <!-- 引入分页面的js代码 -->
+    <script src="./js/category.js"></script>
+</head>
+
+<body>
+    <!-- header导航栏部分 -->
+    <header id="header" class="mui-bar mui-bar-nav abing_header">
+        <h1 class="mui-title">乐淘云购</h1>
+        <a href="javascript:;" class="mui-icon mui-icon-search header_r"></a>
+    </header>
+    <!-- header导航栏部分end -->
+
+    <!-- 主体部分内容 
+    分左右两边盒子 -->
+    <div class="abing_category">
+        <!-- 左侧盒子 -->
+        <div class="category_left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="left_links" id="shuaiabing">
+                        <!-- 此处的内容在数据库中获取 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧盒子 -->
+        <div class="category_right">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="right_links" id="dadadshuaiabing">
+                        <!-- 此处的内容在数据库中获取 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体部分内容 end -->
+    <!-- 底部结构部分 -->
+    <nav class="mui-bar mui-bar-tab abing_nav abing_nav">
+        <a class="mui-tab-item mui-active" href="#tabbar">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item active" href="#tabbar-with-chat">
+            <span class="mui-icon mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="#tabbar-with-contact">
+            <span class="mui-icon iconfont icon-gouwuche"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="#tabbar-with-map">
+            <span class="mui-icon mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <!-- 底部结构部分end -->
+    <!-- 模板引擎 -->
+    <!-- 左侧页面 -->
+    <script type="text/template" id="Category">
+        {{each rows}}
+        <a href="#" data-id="{{$value.id}}">{{$value.categoryName}}</a> {{/each}}
+    </script>
+    <!--  右侧页面 -->
+    <script type="text/template" id="Categorylinks">
+        {{each rows}}
+        <li>
+            <a href="#">
+                <img src="{{$value.brandLogo}}" alt="">
+                <p>{{$value.brandName}}</p>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

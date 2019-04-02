@@ -1,0 +1,54 @@
+.abing_exercise ul {
+  overflow: hidden;
+  width: 100%;
+  z-index: 99;
+}
+.abing_exercise ul li {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.abing_exercise ul li a {
+  display: block;
+  padding: 0 10px;
+  box-shadow: 0 0 5px #ccc;
+}
+.abing_exercise ul li a img {
+  width: 100%;
+  vertical-align: top;
+}
+.abing_exercise ul li a p {
+  font-size: 14px;
+  text-align: center;
+}
+.abing_exercise ul li a p span:first-child {
+  color: #f30;
+}
+.abing_exercise ul li a p span:last-child {
+  color: #ccc;
+  text-decoration: line-through;
+}
+.abing_exercise ul li a > .name {
+  display: block;
+  color: #8f8f94;
+  height: 44px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0;
+}
+.abing_exercise ul li .exercise_btn {
+  display: block;
+  background-color: #006699;
+  margin: 0 auto 10px;
+  color: #fff;
+}
+.contentor {
+  margin: 5px 0;
+}
+.contentor .content_j,
+.contentor .content_x {
+  font-size: 16px;
+  text-align: center;
+  background-color: #efeff4;
+}
